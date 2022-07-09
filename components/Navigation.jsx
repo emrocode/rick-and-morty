@@ -2,7 +2,7 @@ import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/solid';
 
 export default function Navigation(props) {
   return (
-    <div className="flex items-center justify-between bg-white px-4 py-3 sm:px-6">
+    <div className="flex items-center justify-between bg-white py-4">
       <div className="flex flex-1 justify-between sm:hidden">
         <button
           className="relative inline-flex items-center rounded-md rounded-l bg-base01 px-6 py-2 text-sm font-medium text-white"

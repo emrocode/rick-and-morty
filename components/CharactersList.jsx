@@ -21,13 +21,13 @@ export default function CharacterList() {
   }, [page]);
 
   return (
-    <div className="container mx-auto">
+    <div className="w-[90%] mx-auto">
       <Navigation page={page} setPage={setPage} />
       {loading ? (
         <p className="px-4 text-center">Loading...</p>
       ) : (
         <>
-          <div className="grid auto-cols-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          <div className="grid gap-4 auto-cols-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {characters.map((item) => (
               <Character item={item} key={item.id} />
             ))}

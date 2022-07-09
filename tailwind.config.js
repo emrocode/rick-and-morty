@@ -14,6 +14,11 @@ module.exports = {
         "base04" : "#E2E2E2",
       }
     },
+    screens: {
+      'sm': '576px',
+      'md': '768px',
+      'lg': '992px',
+    }
   },
   plugins: [],
 }

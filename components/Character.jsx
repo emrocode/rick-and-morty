@@ -1,13 +1,13 @@
 export default function Character({ item }) {
   return (
-    <article className="p-5 text-center">
+    <article>
       <figure className="relative">
         <img
           src={item.image}
           className="h-auto w-full rounded object-cover sm:object-scale-down"
         />
         <figcaption>
-          <h2 className="absolute bottom-0 w-full bg-base01 p-2 text-base font-semibold text-base04">
+          <h2 className="absolute bottom-0 w-full bg-base01 p-2 text-center font-semibold text-base04">
             {item.name}
           </h2>
         </figcaption>
