@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
-import Character from './Character';
-import Navigation from './Navigation';
+import { useState, useEffect } from "react";
+import Character from "./Character";
+import Navigation from "./Navigation";
 
 export default function CharacterList() {
   const [characters, setCharacters] = useState([]);
@@ -21,13 +21,13 @@ export default function CharacterList() {
   }, [page]);
 
   return (
-    <div className="w-[90%] mx-auto">
+    <div className="mx-auto w-[90%]">
       <Navigation page={page} setPage={setPage} />
       {loading ? (
         <p className="px-4 text-center">Loading...</p>
       ) : (
         <>
-          <div className="grid gap-4 auto-cols-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          <div className="grid grid-cols-none gap-4 md:grid-cols-2">
             {characters.map((item) => (
               <Character item={item} key={item.id} />
             ))}

@@ -1,4 +1,4 @@
-import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/solid';
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/solid";
 
 export default function Navigation(props) {
   return (
@@ -41,7 +41,52 @@ export default function Navigation(props) {
             </button>
             <button
               type="button"
-              className="relative inline-flex items-center rounded-r bg-base01 px-2 py-2 hover:bg-base02"
+              className="relative inline-flex items-center border-l border-base02 bg-base01 px-4 py-2 text-base04 hover:bg-base02"
+              onClick={() => props.setPage(1)}
+            >
+              1
+            </button>
+            <button
+              type="button"
+              className="relative inline-flex items-center border-l border-base02 bg-base01 px-4 py-2 text-base04 hover:bg-base02"
+              onClick={() => props.setPage(2)}
+            >
+              2
+            </button>
+            <button
+              type="button"
+              className="relative inline-flex items-center border-l border-base02 bg-base01 px-4 py-2 text-base04 hover:bg-base02"
+              onClick={() => props.setPage(3)}
+            >
+              3
+            </button>
+            <span className="relative inline-flex cursor-pointer items-center border-l border-base02 bg-base01 px-4 py-2 text-base04 hover:bg-base02">
+              ...
+            </span>
+            <button
+              type="button"
+              className="relative inline-flex items-center border-l border-base02 bg-base01 px-4 py-2 text-base04 hover:bg-base02"
+              onClick={() => props.setPage(28)}
+            >
+              28
+            </button>
+            <button
+              type="button"
+              className="relative inline-flex items-center border-l border-base02 bg-base01 px-4 py-2 text-base04 hover:bg-base02"
+              onClick={() => props.setPage(29)}
+            >
+              29
+            </button>
+            <button
+              type="button"
+              className="relative inline-flex items-center border-l border-r border-base02 bg-base01 px-4 py-2 text-base04 hover:bg-base02"
+              onClick={() => props.setPage(30)}
+            >
+              30
+            </button>
+            <button
+              type="button"
+              className="relative inline-flex items-center rounded-r border-l border-base02 bg-base01 px-2 py-2 hover:bg-base02"
               onClick={() => props.setPage(props.page + 1)}
             >
               <span className="sr-only">Next</span>
