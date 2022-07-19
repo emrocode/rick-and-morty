@@ -33,11 +33,11 @@ function Navigation(props) {
           >
             <button
               type="button"
-              className="relative inline-flex items-center rounded-l border border-black-100 bg-black-200 p-2 hover:bg-black-300"
+              className="relative inline-flex items-center justify-center rounded-l border border-black-100 bg-black-200 p-2 hover:bg-black-300"
               onClick={() => props.setPage(props.page - 1 ? props.page - 1 : 1)}
             >
               <span className="sr-only">Previous</span>
-              <i className="bi bi-chevron-left text-white-300" aria-hidden="true"></i>
+              <i className="bx bx-chevron-left text-[22px] text-white-300" aria-hidden="true"></i>
             </button>
             <button
               type="button"
@@ -114,7 +114,7 @@ function Navigation(props) {
               onClick={() => props.setPage(props.page + 1)}
             >
               <span className="sr-only">Next</span>
-              <i className="bi bi-chevron-right text-white-300" aria-hidden="true"></i>
+              <i className="bx bx-chevron-right text-[22px] text-white-300" aria-hidden="true"></i>
             </button>
           </nav>
         </div>

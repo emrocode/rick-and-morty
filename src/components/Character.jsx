@@ -18,7 +18,7 @@ function Character({ item }) {
               item.status === "Dead" ? "text-[#BF616A]" : ""
             } ${item.status === "unknown" ? "text-[#D8DEE9]" : ""}`}
           >
-            <i className="bi bi-circle-fill mr-2 align-[1px] text-xs"></i>
+            <i className="bx bxs-circle mr-2 text-xs"></i>
           </span>
           {item.status} - {item.species}
         </p>
