@@ -1,6 +1,4 @@
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/solid";
-
-export default function Navigation(props) {
+function Navigation(props) {
   return (
     <div className="flex items-center justify-between bg-white-100 py-4">
       <div>
@@ -39,10 +37,7 @@ export default function Navigation(props) {
               onClick={() => props.setPage(props.page - 1 ? props.page - 1 : 1)}
             >
               <span className="sr-only">Previous</span>
-              <ChevronLeftIcon
-                className="h-5 w-5 fill-white-300"
-                aria-hidden="true"
-              />
+              <i className="bi bi-chevron-left text-white-300" aria-hidden="true"></i>
             </button>
             <button
               type="button"
@@ -115,14 +110,11 @@ export default function Navigation(props) {
             </button>
             <button
               type="button"
-              className="relative inline-flex items-center rounded-r border border-black-100 bg-black-200 p-2 hover:bg-black-300"
+              className="relative inline-flex items-center justify-center rounded-r border border-black-100 bg-black-200 p-2 hover:bg-black-300"
               onClick={() => props.setPage(props.page + 1)}
             >
               <span className="sr-only">Next</span>
-              <ChevronRightIcon
-                className="h-5 w-5 fill-white-300"
-                aria-hidden="true"
-              />
+              <i className="bi bi-chevron-right text-white-300" aria-hidden="true"></i>
             </button>
           </nav>
         </div>
@@ -130,3 +122,5 @@ export default function Navigation(props) {
     </div>
   );
 }
+
+export default Navigation
