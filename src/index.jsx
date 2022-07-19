@@ -1,5 +1,5 @@
-import CharacterList from '../components/CharactersList';
+import { CharactersList } from './components';
 
 export default () => {
-  return <CharacterList />
+  return <CharactersList />
 };
