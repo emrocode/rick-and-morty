@@ -1,4 +1,4 @@
-![Image](screenshot.png)
+![Image](Screenshot.png)
 
 ## Rick and Morty
 Using the [Rick and Morty REST API](https://rickandmortyapi.com/)
