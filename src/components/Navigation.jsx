@@ -10,14 +10,14 @@ function Navigation(props) {
         <button
           type="button"
           className="relative inline-flex items-center rounded-md rounded-full bg-black-200 px-6 py-2 text-sm font-medium text-white-100"
-          onClick={() => props.setPage(props.page - 1 ? props.page - 1 : 1)}
+          onClick={() => props.setPage(props.page > 1 ? props.page - 1 : 1)}
         >
           Previous
         </button>
         <button
           type="button"
           className="relative ml-2 inline-flex items-center rounded-md rounded-full bg-black-200 px-6 py-2 text-sm font-medium text-white-100"
-          onClick={() => props.setPage(props.page + 1)}
+          onClick={() => props.setPage(props.page < 42 ? props.page + 1 : 42)}
         >
           Next
         </button>
@@ -34,10 +34,13 @@ function Navigation(props) {
             <button
               type="button"
               className="relative inline-flex items-center justify-center rounded-l border border-black-100 bg-black-200 p-2 hover:bg-black-300"
-              onClick={() => props.setPage(props.page - 1 ? props.page - 1 : 1)}
+              onClick={() => props.setPage(props.page > 1 ? props.page - 1 : 1)}
             >
               <span className="sr-only">Previous</span>
-              <i className="bx bx-chevron-left text-[22px] text-white-300" aria-hidden="true"></i>
+              <i
+                className="bx bx-chevron-left text-[22px] text-white-300"
+                aria-hidden="true"
+              ></i>
             </button>
             <button
               type="button"
@@ -72,49 +75,55 @@ function Navigation(props) {
             >
               3
             </button>
+
+            <button
+              type="button"
+              className={
+                props.page == 4
+                  ? "relative inline-flex items-center border border-black-100 bg-black-300 px-4 py-2 text-white-300 hover:bg-black-300"
+                  : "relative inline-flex items-center border border-black-100 bg-black-200 px-4 py-2 text-white-300 hover:bg-black-300"
+              }
+              onClick={() => props.setPage(4)}
+            >
+              4
+            </button>
+            <button
+              type="button"
+              className={
+                props.page == 5
+                  ? "relative inline-flex items-center border border-black-100 bg-black-300 px-4 py-2 text-white-300 hover:bg-black-300"
+                  : "relative inline-flex items-center border border-black-100 bg-black-200 px-4 py-2 text-white-300 hover:bg-black-300"
+              }
+              onClick={() => props.setPage(5)}
+            >
+              5
+            </button>
             <span className="relative inline-flex cursor-pointer items-center border border-black-100 bg-black-200 px-4 py-2 text-white-300 hover:bg-black-300">
               ...
             </span>
             <button
               type="button"
               className={
-                props.page == 8
+                props.page == 42
                   ? "relative inline-flex items-center border border-black-100 bg-black-300 px-4 py-2 text-white-300 hover:bg-black-300"
                   : "relative inline-flex items-center border border-black-100 bg-black-200 px-4 py-2 text-white-300 hover:bg-black-300"
               }
-              onClick={() => props.setPage(8)}
+              onClick={() => props.setPage(42)}
             >
-              8
-            </button>
-            <button
-              type="button"
-              className={
-                props.page == 9
-                  ? "relative inline-flex items-center border border-black-100 bg-black-300 px-4 py-2 text-white-300 hover:bg-black-300"
-                  : "relative inline-flex items-center border border-black-100 bg-black-200 px-4 py-2 text-white-300 hover:bg-black-300"
-              }
-              onClick={() => props.setPage(9)}
-            >
-              9
-            </button>
-            <button
-              type="button"
-              className={
-                props.page == 10
-                  ? "relative inline-flex items-center border border-black-100 bg-black-300 px-4 py-2 text-white-300 hover:bg-black-300"
-                  : "relative inline-flex items-center border border-black-100 bg-black-200 px-4 py-2 text-white-300 hover:bg-black-300"
-              }
-              onClick={() => props.setPage(10)}
-            >
-              10
+              42
             </button>
             <button
               type="button"
               className="relative inline-flex items-center justify-center rounded-r border border-black-100 bg-black-200 p-2 hover:bg-black-300"
-              onClick={() => props.setPage(props.page + 1)}
+              onClick={() =>
+                props.setPage(props.page < 42 ? props.page + 1 : 42)
+              }
             >
               <span className="sr-only">Next</span>
-              <i className="bx bx-chevron-right text-[22px] text-white-300" aria-hidden="true"></i>
+              <i
+                className="bx bx-chevron-right text-[22px] text-white-300"
+                aria-hidden="true"
+              ></i>
             </button>
           </nav>
         </div>
@@ -123,4 +132,4 @@ function Navigation(props) {
   );
 }
 
-export default Navigation
+export default Navigation;

@@ -9,12 +9,14 @@ export default function CharacterList() {
 
   useEffect(() => {
     async function getData() {
-      const res = await fetch(
-        `https://rickandmortyapi.com/api/character?page=${page}`
-      );
-      const data = await res.json();
-      setLoading(false);
-      setCharacters(data.results);
+      await fetch(`https://rickandmortyapi.com/api/character?page=${page}`)
+        .then((response) => response.json())
+        .then((json) => {
+          setCharacters(json.results);
+        })
+        .then(() => {
+          setLoading(false);
+        });
     }
 
     getData();
@@ -27,7 +29,7 @@ export default function CharacterList() {
         <p className="text-center">Loading...</p>
       ) : (
         <>
-          <div className="grid grid-cols-none gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          <div className="grid grid-cols-none gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {characters.map((item) => (
               <Character item={item} key={item.id} />
             ))}
