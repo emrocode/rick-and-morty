@@ -1,4 +1,4 @@
-![preview](https://user-images.githubusercontent.com/92260849/190675654-9ee0d5d1-91d6-4e04-9347-7f6e2e1b3991.png)
+![preview](https://user-images.githubusercontent.com/92260849/190875978-c4979f4b-f615-4ff3-b722-c159e6af37c7.png)
 ## Rick and Morty
 Using the Rick and Morty REST API
 ### Built with:
