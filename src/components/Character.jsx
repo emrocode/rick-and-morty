@@ -1,7 +1,7 @@
 export default function Character({ item }) {
   return (
     <article
-      className="cursor-default overflow-hidden rounded-sm border-4 border-black-300 bg-black-200"
+      className="cursor-default overflow-hidden rounded-sm border-4 border-black-300 bg-black-100"
       key={item.id}
     >
       <figure className="overflow-hidden border-b-4 border-black-300">
