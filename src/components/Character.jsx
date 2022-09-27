@@ -1,19 +1,16 @@
 export default function Character({ item }) {
   return (
     <article
-      className="cursor-default overflow-hidden rounded-sm border-4 border-black-300 bg-black-100"
+      className="cursor-default select-none overflow-hidden rounded-md bg-white-100 p-4 shadow-sm"
       key={item.id}
     >
-      <figure className="overflow-hidden border-b-4 border-black-300">
+      <figure className="relative overflow-hidden rounded-md">
         <img
           src={item.image}
           className="block h-[300px] w-full object-cover object-center"
           alt={item.name}
         />
-      </figure>
-      <section className="flex flex-col gap-y-2 p-4 text-white-100">
-        <h2 className="text-xl font-bold">{item.name}</h2>
-        <div className="flex items-center gap-x-2 text-sm capitalize">
+        <figcaption className="absolute bottom-0 flex w-full items-center gap-x-2 bg-black-300 p-2 text-sm capitalize text-white-100">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-2.5 w-2.5"
@@ -29,13 +26,16 @@ export default function Character({ item }) {
           <span className="leading-4">
             {item.status} - {item.species}
           </span>
-        </div>
+        </figcaption>
+      </figure>
+      <section className="flex flex-col gap-y-2 px-1 pt-3 text-black-200">
+        <h2 className="text-xl font-bold">{item.name}</h2>
         <div className="text-sm">
-          <span className="block font-medium text-white-300">Origin:</span>
+          <span className="block font-bold text-black-100">Origin:</span>
           <span className="block capitalize">{item.origin.name}</span>
         </div>
         <div className="text-sm">
-          <span className="block font-medium text-white-300">
+          <span className="block font-bold text-black-100">
             Last known location:
           </span>
           <span className="block capitalize">{item.location.name}</span>
