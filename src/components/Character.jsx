@@ -1,7 +1,7 @@
 export default function Character({ item }) {
   return (
     <article
-      className="cursor-default select-none overflow-hidden rounded-md bg-white-100 p-4 shadow-sm"
+      className=" cursor-default select-none overflow-hidden rounded-md bg-white-100 p-4 shadow-sm"
       key={item.id}
     >
       <figure className="relative overflow-hidden rounded-md">
@@ -10,7 +10,7 @@ export default function Character({ item }) {
           className="block h-[300px] w-full object-cover object-center"
           alt={item.name}
         />
-        <figcaption className="absolute bottom-0 flex w-full items-center gap-x-2 bg-black-300 p-2 text-sm capitalize text-white-100">
+        <figcaption className="absolute bottom-0 flex w-full items-center gap-x-2 bg-black-300 px-3 py-2 text-sm capitalize text-white-100">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-2.5 w-2.5"
