@@ -3,12 +3,8 @@
 @tailwind utilities;
 
 @layer base {
-  ::-webkit-scrollbar {
-    @apply hidden
-  }
-
   html,
   body {
-    @apply bg-white-200 text-black-300 antialiased;
+    @apply min-h-screen bg-gray-100 text-neutral-800 antialiased;
   }
 }

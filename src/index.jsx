@@ -1,5 +1,9 @@
 import { CharactersList } from "./components";
 
 export default function App() {
-  return <CharactersList />;
+  return (
+    <main>
+      <CharactersList />
+    </main>
+  );
 }

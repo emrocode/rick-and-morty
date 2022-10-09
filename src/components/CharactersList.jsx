@@ -24,16 +24,16 @@ export default function CharacterList() {
   }, [page]);
 
   return (
-    <main>
+    <>
       <Navigation page={page} setPage={setPage} />
       {loading ? (
         <div className="absolute top-0 left-0 flex h-screen w-full select-none items-center justify-center p-4">
           <button
             type="button"
-            className="inline-flex items-center rounded-md bg-white-100 px-4 py-2 text-black-200"
+            className="inline-flex items-center rounded-md bg-white px-4 py-2 text-neutral-800 shadow-sm"
           >
             <svg
-              className="-ml-1 mr-3 h-5 w-5 animate-spin text-black-200"
+              className="-ml-1 mr-3 h-5 w-5 animate-spin text-neutral-800"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -67,6 +67,6 @@ export default function CharacterList() {
           <Footer />
         </>
       )}
-    </main>
+    </>
   );
 }
