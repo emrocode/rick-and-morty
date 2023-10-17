@@ -6,7 +6,7 @@ module.exports = {
       sans: ["Open Sans", "sans-serif"],
     },
     gridTemplateColumns: {
-      auto: "repeat(auto-fill, minmax(min(100%, 15rem), 1fr))",
+      auto: "repeat(auto-fill, minmax(min(100%, 16rem), 1fr))",
     },
   },
 };
