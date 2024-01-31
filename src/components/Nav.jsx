@@ -7,7 +7,7 @@ export default function Navigation(props) {
         </span>
         <div className="flex gap-x-2">
           <button
-            className="relative inline-flex items-center rounded-md border bg-neutral-800 px-4 py-2 text-sm font-medium text-white disabled:opacity-60"
+            className="relative inline-flex items-center rounded-md border bg-neutral-800 px-4 py-2 text-sm font-medium text-white transition-colors duration-300 hover:bg-neutral-700 disabled:bg-neutral-800 disabled:opacity-60"
             onClick={() =>
               props.setPage((props.page > 1 && props.page - 1) || 1)
             }
@@ -16,7 +16,7 @@ export default function Navigation(props) {
             Prev
           </button>
           <button
-            className="relative inline-flex items-center rounded-md border bg-neutral-800 px-4 py-2 text-sm font-medium text-white disabled:opacity-60"
+            className="relative inline-flex items-center rounded-md border bg-neutral-800 px-4 py-2 text-sm font-medium text-white transition-colors duration-300 hover:bg-neutral-700 disabled:bg-neutral-800 disabled:opacity-60"
             onClick={() =>
               props.setPage((props.page < 42 && props.page + 1) || 42)
             }
