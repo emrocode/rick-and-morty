@@ -1,19 +1,22 @@
+import DownloadImageButton from "./DownloadImageButton";
+
 export default function Character({ item }) {
   return (
     <article
-      className="cursor-default rounded-sm bg-white p-4 shadow-sm"
+      className="cursor-default rounded-md bg-white p-4 shadow-sm"
       key={item.id}
     >
-      <figure className="overflow-hidden rounded-sm bg-gray-100">
+      <figure className="relative overflow-hidden rounded-md bg-gray-100">
         <img
           src={item.image}
-          className="block h-[240px] w-full object-cover object-center"
+          className="block h-[240px] w-full object-cover object-center transition-transform duration-300 ease-in-out hover:scale-105"
           alt={item.name}
           loading="lazy"
+          draggable="false"
         />
+      <DownloadImageButton id={item.id} />
       </figure>
-      <span className="block w-full h-[1px] my-4 bg-neutral-200"></span>
-      <section className="flex flex-col gap-y-2 px-1 text-neutral-800">
+      <section className="flex flex-col gap-y-2 px-1 pt-5 text-neutral-800">
         <h2 className="text-xl font-bold leading-none">{item.name}</h2>
         <div className="flex w-full items-center gap-x-2 text-sm capitalize">
           <div className="relative flex h-2.5 w-2.5 items-center justify-center">
@@ -36,6 +39,7 @@ export default function Character({ item }) {
             {item.status} - {item.species}
           </span>
         </div>
+        <span className="my-2 block h-[1px] w-full bg-neutral-300"></span>
         <div className="text-sm">
           <span className="block font-bold text-neutral-700">Origin:</span>
           <span className="block capitalize">{item.origin.name}</span>
