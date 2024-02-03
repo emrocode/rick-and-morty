@@ -1,11 +1,7 @@
 ![Preview][]
-
 ## Rick and Morty
-
 Using Rick and Morty REST API
-
 ### Built with:
-
 - [React][]
 - [Tailwindcss][]
 
