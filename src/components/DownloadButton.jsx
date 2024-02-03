@@ -1,10 +1,8 @@
-import { useState } from "react";
+
 import { Download } from "lucide-react";
 
-const DownloadImageButton = ({ id }) => {
-  const [imageUrl, _setImageUrl] = useState(
-    `https://rickandmortyapi.com/api/character/avatar/${id}.jpeg`
-  );
+const DownloadButton = ({ id }) => {
+  const imageUrl = `https://rickandmortyapi.com/api/character/avatar/${id}.jpeg`;
 
   const handleDownload = async () => {
     try {
@@ -25,7 +23,7 @@ const DownloadImageButton = ({ id }) => {
   return (
     <button
       type="button"
-      className="absolute bottom-2 right-2 inline-flex items-center rounded-md border border-b-2 border-neutral-700 bg-neutral-800 p-2 text-sm font-medium text-white transition-colors duration-300 hover:bg-neutral-700"
+      className="absolute bottom-2 right-2 inline-flex w-max items-center rounded bg-neutral-800 p-2 text-sm font-medium text-white transition-colors duration-300 hover:bg-neutral-700"
       onClick={handleDownload}
     >
       <Download size={16} />
@@ -34,4 +32,4 @@ const DownloadImageButton = ({ id }) => {
   );
 };
 
-export default DownloadImageButton;
+export default DownloadButton;
