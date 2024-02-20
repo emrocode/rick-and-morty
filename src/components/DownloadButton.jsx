@@ -23,11 +23,11 @@ const DownloadButton = ({ id }) => {
   return (
     <button
       type="button"
-      className="absolute bottom-2 right-2 inline-flex w-max items-center rounded bg-neutral-800 p-2 text-sm font-medium text-white transition-colors duration-300 hover:bg-neutral-700"
+      className="absolute bottom-2 right-2 inline-flex w-max items-center rounded bg-neutral-800/60 p-2 text-sm font-medium text-white transition-colors duration-300 hover:bg-neutral-700"
       onClick={handleDownload}
+      aria-label="Download image"
     >
       <Download size={16} />
-      <span className="ml-2 text-xs">Download image</span>
     </button>
   );
 };
