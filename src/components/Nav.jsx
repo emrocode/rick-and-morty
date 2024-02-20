@@ -13,14 +13,14 @@ export default function Navigation(props) {
           className="text-base font-bold uppercase before:content-['\005B'] after:content-['\005D']"
           reloadDocument={isHome}
         >
-          rick & morty
+          logo
         </NavLink>
         <div className="flex items-center gap-x-4">
           <span className="text-sm font-bold text-neutral-800">
             Page: {props.page} of 42
           </span>
           <hr className="block h-8 w-px bg-neutral-200" />
-          <div className="flex gap-x-2">
+          <div className="flex gap-x-1">
             <button
               className="relative inline-flex items-center rounded-md border bg-neutral-800 px-4 py-2 text-sm font-medium text-white transition-colors duration-300 hover:bg-neutral-700 disabled:bg-neutral-800 disabled:opacity-60"
               onClick={() =>
